@@ -8,6 +8,8 @@
 
 This notebook implements full-precision LoRA fine-tuning specifically engineered for **Mixture-of-Experts (MoE)** architecture models. Standard fine-tuning scripts often break on MoE models due to CPU offloading conflicts with expert routing layers. This solution targets only attention layers with LoRA adapters, sidesteps those pitfalls, and squeezes training onto a single H100 with aggressive memory optimizations.
 
+Link to model on HF: https://huggingface.co/tensorhydra/gpt-oss-20b-numinamath
+
 **Key features:**
 - MoE-compatible LoRA configuration (attention-only targeting)
 - Flash Attention 2 integration
